@@ -6,16 +6,19 @@
 # CIDR range, and output a Pass/Fail based on that determination.
 ###################################################################################
 import argparse
+import ipaddress
 
 
-# Create parser, add argument for IPv4 address, print/check output
 parser = argparse.ArgumentParser(description="Input IPv4 address to check if contained in a group of supplied CIDRs.")
-parser.add_argument("ipv4", help="IPv4 address provided")
-args = parser.parse_args()
+parser.add_argument("ipv4", help="IPv4 address provided", type=ipaddress.IPv4Address)
+ipv4_addr = parser.parse_args().ipv4
 
-print(f"IP Address: {args.ipv4}")  # temp output check
+print(f"IPv4 Address: {ipv4_addr}")
+print(type(ipv4_addr))
 
-# TODO - validate command line input (1 argument, IPv4 format, CIDR notation?, data type, loop?)
+# ipv4_addr in ipaddress.ip_network(CIDR) ... List comprehension?
+
+# TODO - validate command line input (loop to enter correct argument value?)
 
 # TODO - get JSON data from webpage (request HTTP vs scrape; performance?)
 

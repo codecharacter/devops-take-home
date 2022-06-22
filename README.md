@@ -52,6 +52,51 @@ _(Pending)_
     - default value for arguments, 
     - help message, 
     - specifying data types of argument
+- [ipaddress](https://docs.python.org/3.9/library/ipaddress.html)
+  - provides many capabilities to work with IP addresses (input) and networks (CIDRs)
+  - including relevant to this task:
+    - checking validity of an IP address (input)
+    - iterating over all hosts in a particular subnet (CIDR)
+
+## Workflow for Selecting Packages
+
+I noted this workflow from one of the training courses I completed.  And am actively applying when possible.
+
+1. Find Candidate Packages
+   - Browse a curated list
+   - Search Google 2-5 relevant keywords
+   - Search Stack Overflow
+   - Search Community Forums: Reddit, HackerNews, Twitter
+   - Search PyPI directly
+   . Ask a question on SO, Reddit, Twitter (slow)-
+2. Check Package Popularity
+   - Check download stats if available
+   - Google/Reddit/SO recommendations
+   - GitHub 'stars' (visible on PyPI)
+   - python.libhunt.com popularity indicator
+3. Check Project Homepage
+   - Is it helpful?
+   - Is it well-maintained?
+   - How "successful" does the project look?
+4. Check Project README
+   - Does it cover what the project does & how to install it?
+   - What license is the project under?
+   - Who is the author?
+5. Is the Project Actively Maintained?
+   - Skim the changelog/update history
+   - Is there activity on the bug tracker?
+   - When was the last commit of the project?
+6. Spot-Check the Source Code
+   - note: growing in my ability to do this; principles apply
+   - Does it follow best practices? (formatting, style, comments, docstrings)
+   - Are there (automated) tests?
+   - How experienced were the developers who wrote it?
+   - Would I feel comfortable making small changes if I had to?
+     - if I had to maintain the library going forward
+7. Try Out a Few Candidates
+   - Take the (narrowed down) list of candidates and try them out in an interpreter session.
+   - Does the package install and import cleanly?
+   - Do I enjoy working with the package?
 
 ## Decisions and Tradeoffs
 
@@ -61,7 +106,11 @@ _(Pending)_
 
 - argparse
   - [Python Docs: Argparse Tutorial](https://docs.python.org/3.9/howto/argparse.html)
-  -  
+  - [Read the Docs: argparse](https://pyneng.readthedocs.io/en/latest/book/additional_info/argparse.html)
+- ipaddress
+  - [Python Docs: An Intro to the ipaddress Module](https://docs.python.org/3.9/howto/ipaddress.html)
+  - [RealPython.com: Learn IP Address Concepts with Python's ipaddress Module](https://realpython.com/python-ipaddress-module/)
+- 
 
 ## Release History
 
