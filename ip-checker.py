@@ -7,24 +7,51 @@
 ###################################################################################
 import argparse
 import ipaddress
+import requests
+from requests.exceptions import HTTPError, Timeout, ConnectionError
+from requests.adapters import HTTPAdapter
 
 
 parser = argparse.ArgumentParser(description="Input IPv4 address to check if contained in a group of supplied CIDRs.")
 parser.add_argument("ipv4", help="IPv4 address provided", type=ipaddress.IPv4Address)
 ipv4_addr = parser.parse_args().ipv4
+print(f"IPv4 Address Provided to Check: {ipv4_addr}")
 
-print(f"IPv4 Address: {ipv4_addr}")
-print(type(ipv4_addr))
+# TODO - loop to enter correct argument value?
 
-# ipv4_addr in ipaddress.ip_network(CIDR) ... List comprehension?
+ripe_network_adapter = HTTPAdapter(max_retries=3)
 
-# TODO - validate command line input (loop to enter correct argument value?)
+for url in ["https://stat.ripe.net/data/country-resource-list/data.json?resource=US&v4_format=prefix"]:
+    try:
+        # Using context manager, ensures resources used by session released after use
+        # In this case, enables mounting of Transport Adapter for retry attempts
+        with requests.Session() as session:
 
-# TODO - get JSON data from webpage (request HTTP vs scrape; performance?)
+            # Mounting transport adapter to CIDR webpage host with max retries
+            session.mount("https://stat.ripe.net", ripe_network_adapter)
 
-# TODO - load/filter only the IPv4 JSON data (List, data type, CIDR formatting)
+            # Setting timeout=(c, r) where c=connect timeout, r=read timeout
+            print("Checking if CIDR data on webpage is available, then proceeding...")
+            response = session.get(url, timeout=(5, 30))
+
+            # If the response was successful, no Exception will be raised
+            response.raise_for_status()
+
+    except ConnectionError as conn_err:
+        print(f"Connection error occurred: {conn_err}\nPlease try again.")
+    except Timeout as timeout_err:
+        print(f"Timeout error occurred: {timeout_err}\nPlease try again.")
+    except HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}\nPlease try again.")
+    except Exception as err:
+        print(f"Other error occurred: {err}\nPlease try again.")
+    else:
+        json_response = response.json()
+        print(json_response['data']['resources']['ipv4'][0])
+
 
 # TODO - determine whether IP provided on CLI is in any of CIDRs from JSON data (CIDR range checks, performance)
+# ipv4_addr in ipaddress.ip_network(CIDR) ... List comprehension?
 
 # TODO - output Pass/Fail from this result
 

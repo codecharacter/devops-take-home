@@ -44,7 +44,7 @@ _(Pending)_
 
 ## Libraries/Tools Used
 
-- [argparse](https://docs.python.org/3.9/library/argparse.html)
+- [argparse](https://docs.python.org/3.9/library/argparse.html) (Std Lib)
   - The recommended command-line parsing module in the Python standard library.
   - Other modules that fulfill the same task: [getopt](https://docs.python.org/3.9/library/getopt.html#module-getopt), [optparse](https://docs.python.org/3.9/library/optparse.html#module-optparse) (deprecated)
   - argparse provides options: 
@@ -52,48 +52,57 @@ _(Pending)_
     - default value for arguments, 
     - help message, 
     - specifying data types of argument
-- [ipaddress](https://docs.python.org/3.9/library/ipaddress.html)
+- [ipaddress](https://docs.python.org/3.9/library/ipaddress.html) (Std Lib)
   - provides many capabilities to work with IP addresses (input) and networks (CIDRs)
   - including relevant to this task:
     - checking validity of an IP address (input)
     - iterating over all hosts in a particular subnet (CIDR)
+- [requests](https://pypi.org/project/requests/) (PyPI)
+  - the standard for making HTTP requests in Python
+  - abstracts complexities of making requests so focus can be on consuming data & interacting with services
+  - one of the most download Python packages (~30M/wk)
+  - relevant features:
+    - keep-alive & connection pooling
+    - timeouts
+    - sessions
+    - transport adapters
 
 ## Workflow for Selecting Packages
 
 I noted this workflow from one of the training courses I completed.  And am actively applying when possible.
 
-1. Find Candidate Packages
+### 1. Find Candidate Packages
    - Browse a curated list
    - Search Google 2-5 relevant keywords
    - Search Stack Overflow
    - Search Community Forums: Reddit, HackerNews, Twitter
    - Search PyPI directly
    . Ask a question on SO, Reddit, Twitter (slow)-
-2. Check Package Popularity
+### 2. Check Package Popularity
    - Check download stats if available
    - Google/Reddit/SO recommendations
    - GitHub 'stars' (visible on PyPI)
    - python.libhunt.com popularity indicator
-3. Check Project Homepage
+### 3. Check Project Homepage
    - Is it helpful?
    - Is it well-maintained?
    - How "successful" does the project look?
-4. Check Project README
+### 4. Check Project README
    - Does it cover what the project does & how to install it?
    - What license is the project under?
    - Who is the author?
-5. Is the Project Actively Maintained?
+### 5. Is the Project Actively Maintained?
    - Skim the changelog/update history
    - Is there activity on the bug tracker?
    - When was the last commit of the project?
-6. Spot-Check the Source Code
+### 6. Spot-Check the Source Code
    - note: growing in my ability to do this; principles apply
    - Does it follow best practices? (formatting, style, comments, docstrings)
    - Are there (automated) tests?
    - How experienced were the developers who wrote it?
    - Would I feel comfortable making small changes if I had to?
      - if I had to maintain the library going forward
-7. Try Out a Few Candidates
+### 7. Try Out a Few Candidates
    - Take the (narrowed down) list of candidates and try them out in an interpreter session.
    - Does the package install and import cleanly?
    - Do I enjoy working with the package?
@@ -110,7 +119,9 @@ _(Pending)_
 - ipaddress
   - [Python Docs: An Intro to the ipaddress Module](https://docs.python.org/3.9/howto/ipaddress.html)
   - [RealPython.com: Learn IP Address Concepts with Python's ipaddress Module](https://realpython.com/python-ipaddress-module/)
-- 
+- requests
+  - [Read the Docs: requests](https://requests.readthedocs.io/en/latest/)
+  - [RealPython.com: Python's Requests Library (Guide)]
 
 ## Release History
 
