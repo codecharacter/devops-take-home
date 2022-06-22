@@ -60,7 +60,7 @@ _(Pending)_
 - [requests](https://pypi.org/project/requests/) (PyPI)
   - the standard for making HTTP requests in Python
   - abstracts complexities of making requests so focus can be on consuming data & interacting with services
-  - one of the most download Python packages (~30M/wk)
+  - one of the most downloaded Python packages (~30M/wk)
   - relevant features:
     - keep-alive & connection pooling
     - timeouts
@@ -121,7 +121,7 @@ _(Pending)_
   - [RealPython.com: Learn IP Address Concepts with Python's ipaddress Module](https://realpython.com/python-ipaddress-module/)
 - requests
   - [Read the Docs: requests](https://requests.readthedocs.io/en/latest/)
-  - [RealPython.com: Python's Requests Library (Guide)]
+  - [RealPython.com: Python's Requests Library (Guide)](https://realpython.com/python-requests/)
 
 ## Release History
 
