@@ -1,4 +1,4 @@
-# "Production" environment dependencies
+# Locked down, known-good versions of dependencies for use in a "prod" environment
 
 # Direct dependencies
 requests==2.28.0
