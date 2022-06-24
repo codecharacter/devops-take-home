@@ -3,7 +3,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-![](github-header-built.png)
+![](images/dan-wadleigh-github-header-built.png)
 
 ## Requirements
 
@@ -16,13 +16,25 @@
 
 ## How to Setup
 
-Run the following commands given Python 3.8+ is installed.
+Run the following commands given Python 3.7+ is installed.
+
+Developed on Python Version: 3.9.13  (pyenv local 3.9.13)
 
 OS X & Linux:
 
 ```sh
+# Clone repo from codecharacter GitHub
 git clone https://github.com/codecharacter/devops-take-home.git
 cd devops-take-home
+
+# (Recommended) Set up virtual environment to safeguard from any package conflicts with current
+python3 -m venv venv
+source venv/bin/activate
+
+# For running tests, install/restore dependencies from the requirements-dev.txt file
+pip install -r requirements-dev.txt
+
+# For running the script without test framework install/restore from requirements.txt
 pip install -r requirements.txt
 ```
 
@@ -34,13 +46,33 @@ cd devops-take-home
 python ip_checker.py [IPv4 address]
 
 Example:
-python ip_checker.py 172.25.3.100
+python ip_checker.py 2.56.8.1
 ```
-_(Pending) Examples of how the IP Checker program can be used (code blocks and screenshots)._
+
+Example Output for a PASS:
+
+![](images/devops-take-home-script-run-pass.png)
+
+Example Output for a Fail:
+
+![](images/devops-take-home-script-run-fail.png)
 
 ## Running Tests
 
-_(Pending)_
+```shell
+Framework: pytest
+
+# In cloned GitHub directory (you may very well be aware of all this)
+cd devops-take-home
+
+pytest  # Run all tests
+pytest tests/[filename].py  # Run any individual test
+
+# Coverage report generated from pytest-cov plugin with:
+coverage run ip-checker.py [ip-address]
+```
+
+![](images/devops-take-home-coverage-report.png)
 
 ## Libraries/Tools Used
 
@@ -66,13 +98,22 @@ _(Pending)_
     - timeouts
     - sessions
     - transport adapters
+- [pytest](https://pypi.org/project/pytest/)
+  - testing framework used to write tests for this exercise
+  - alternate testing framework available (not used): [unittest](https://docs.python.org/3.9/library/unittest.html)
+  - generally, easy to use, available resources online, usable output
+    - ability to filter tests
+    - allows test parametrization
+- [pytest-cov](https://pypi.org/project/pytest-cov/)
+  - plugin that produces coverage reports
 
 ## Workflow for Selecting Packages
 
 I noted this workflow from one of the training courses I completed.  And am actively applying when possible.
 
 ### 1. Find Candidate Packages
-   - Browse a curated list
+   - Browse a curated list:
+     - [awesome-python.com](https://awesome-python.com/), [python.libhunt.com](https://python.libhunt.com/), [python-guide.org](https://docs.python-guide.org/), [pymotw.com](https://pymotw.com/3/), [wiki.python.org](https://wiki.python.org/moin/)
    - Search Google 2-5 relevant keywords
    - Search Stack Overflow
    - Search Community Forums: Reddit, HackerNews, Twitter
@@ -107,10 +148,6 @@ I noted this workflow from one of the training courses I completed.  And am acti
    - Does the package install and import cleanly?
    - Do I enjoy working with the package?
 
-## Decisions and Tradeoffs
-
-_(Pending)_
-
 ## Resources
 
 - argparse
@@ -122,11 +159,16 @@ _(Pending)_
 - requests
   - [Read the Docs: requests](https://requests.readthedocs.io/en/latest/)
   - [RealPython.com: Python's Requests Library (Guide)](https://realpython.com/python-requests/)
+- pytest
+  - [pytest Docs](https://docs.pytest.org/en/7.1.x/)
+  - [RealPython.com](https://realpython.com/pytest-python-testing/)
+- pytest-cov
+  - [Read the Docs: pytest-cov](https://pytest-cov.readthedocs.io/en/latest/)
 
 ## Release History
 
 * 1.0
-    * Work in progress
+    * ~~Work in progress~~ Submitted 6/24/2022
 
 ## Info: Dan Wadleigh
 
