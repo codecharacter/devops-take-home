@@ -1,4 +1,4 @@
-"""tests if IPv4 address is present in CIDR range"""
+"""Tests if IPv4 address is present in CIDR range"""
 
 import pytest
 import ipaddress
@@ -23,6 +23,6 @@ def is_ipv4_in_cidr(test_ip, test_cidr):
     ("172.31.1.100", "223.165.112.0/20", False),
 ])
 def test_is_ipv4_in_cidr(test_ip, test_cidr, expected_result):
-    """test if valid IPv4 in CIDR range"""
+    """Test if valid IPv4 in CIDR range"""
 
     assert is_ipv4_in_cidr(test_ip, test_cidr) == expected_result

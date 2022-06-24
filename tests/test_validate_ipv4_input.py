@@ -1,4 +1,4 @@
-"""tests if argument input provided is valid IPv4"""
+"""Tests if argument input provided is valid IPv4"""
 
 import pytest
 import ipaddress
@@ -25,6 +25,6 @@ def is_valid_ipv4(test_ip):
     ("2001:0db8:85a3:0000:0000:8a2e:0370:7334", False)
 ])
 def test_is_valid_ipv4(test_ip, expected_result):
-    """test if valid IPv4 address"""
+    """Test if valid IPv4 address"""
 
     assert is_valid_ipv4(test_ip) == expected_result

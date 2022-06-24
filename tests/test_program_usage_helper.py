@@ -1,4 +1,4 @@
-"""tests if program usage helper present indicating required parameter input"""
+"""Tests if program usage helper present indicating required parameter input"""
 
 from subprocess import getstatusoutput
 
@@ -6,7 +6,7 @@ prg = "./ip-checker.py"
 
 
 def test_program_usage_helper():
-    """program usage helper for parameter"""
+    """Program usage helper for parameter"""
 
     for flag in ["-h", "--help"]:
         exitcode, output = getstatusoutput(f"{prg} {flag}")

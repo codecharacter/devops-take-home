@@ -1,4 +1,4 @@
-"""tests if CIDR data from webpage is valid IPv4 network address range"""
+"""Tests if CIDR data from webpage is valid IPv4 network address range"""
 
 import pytest
 import ipaddress
@@ -25,6 +25,6 @@ def is_valid_ipv4_cidr(test_cidr):
     ("2001:400::/32", False)
 ])
 def test_is_valid_ipv4_cidr(test_cidr, expected_result):
-    """test if valid IPv4 CIDR range"""
+    """Test if valid IPv4 CIDR range"""
 
     assert is_valid_ipv4_cidr(test_cidr) == expected_result

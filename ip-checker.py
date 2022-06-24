@@ -82,7 +82,7 @@ def main():
             print("Checking if CIDR data on webpage is available, then requesting data...")
             print("   > there's a lot of data, it may take a minute (insert: elevator theme music)")
             response = get_data(session)
-            response.raise_for_status()  # If the response was successful, no Exception will be raised
+            response.raise_for_status()  # Assert that there were no errors
 
     except ConnectionError as conn_err:
         print(f"Connection error occurred: {conn_err}\nPlease try again.")
@@ -103,5 +103,3 @@ def main():
 # -------------------------------------------------------------------
 if __name__ == "__main__":
     main()
-
-# TODO - review README file (how to setup, example usage, testing)
