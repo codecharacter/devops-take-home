@@ -11,7 +11,7 @@
 
 ## <a id="python-testing"></a> Python Testing
 
-![](../images/software-testing-pyramid.jpeg)
+![](images/software-testing-pyramid.jpeg)
 
 ### Lessons
 
@@ -136,7 +136,7 @@
 
 ## <a id="tdd"></a> Test-Driven Development
 
-![](../images/test-driven-development.png)
+![](images/test-driven-development.png)
 
 ### Lessons
 
@@ -318,7 +318,7 @@
 
 ## <a id="unit-tests"></a> Unit Tests
 
-![](../images/unit-testing.png)
+![](images/unit-testing.png)
 
 ### Lessons
 

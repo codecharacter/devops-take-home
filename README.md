@@ -3,7 +3,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-![](images/dan-wadleigh-github-header-built.png)
+![](docs/images/dan-wadleigh-github-header-built.png)
 
 ## Requirements
 
@@ -51,11 +51,11 @@ python ip_checker.py 2.56.8.1
 
 Example Output for a PASS:
 
-![](images/devops-take-home-script-run-pass.png)
+![](docs/images/devops-take-home-script-run-pass.png)
 
 Example Output for a Fail:
 
-![](images/devops-take-home-script-run-fail.png)
+![](docs/images/devops-take-home-script-run-fail.png)
 
 ## Running Tests
 
@@ -72,7 +72,7 @@ pytest tests/[filename].py  # Run any individual test
 coverage run ip-checker.py [ip-address]
 ```
 
-![](images/devops-take-home-coverage-report.png)
+![](docs/images/devops-take-home-coverage-report.png)
 
 ## Libraries/Tools Used
 
