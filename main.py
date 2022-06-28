@@ -15,7 +15,6 @@ def main():
     """Main logic for ip-checker program"""
 
     ipv4_addr = iparg.get_ipv4_arg()
-    print(f"IPv4 Address Provided: {ipv4_addr}")
 
     cidr_ranges = cidrdata.get_cidr_data()
 
