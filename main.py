@@ -7,7 +7,7 @@ Python Performance Package (pending dev):
  - from flux.capacitor import GigaWatts  //default=1.21
  - from flux.capacitor import MilesPerHour //default=88
 """
-# wip
+
 from ipcheck import iparg, cidrdata, checkip
 
 
@@ -16,13 +16,10 @@ def main():
 
     ipv4_addr = iparg.get_ipv4_arg()
 
-    cidr_ranges = cidrdata.get_cidr_data()
+    json_url = "https://stat.ripe.net/data/country-resource-list/data.json?resource=US&v4_format=prefix"
+    cidr_ranges = cidrdata.get_cidr_data(json_url)
 
-    output = checkip.check_ipv4_in_cidr_ranges(ipv4_addr, cidr_ranges)
-    if output:
-        print(f"PASS!  The provided IP {ipv4_addr} is in a CIDR range provided.")
-    else:
-        print(f"Fail.  The provided IP {ipv4_addr} is NOT in any of the CIDR ranges.")
+    checkip.check_ipv4_in_cidr_ranges(ipv4_addr, cidr_ranges['data']['resources']['ipv4'])
 
 
 if __name__ == "__main__":

@@ -146,6 +146,7 @@
 
 ### Mocking
 
+- [Pytest Docs: How to monkeypatch/mock modules and environments](https://docs.pytest.org/en/7.1.x/how-to/monkeypatch.html)
 - [changhsinlee.com: pytest - How to Mock in Python](https://changhsinlee.com/pytest-mock/)
 - [WaylonWalker.com: pytest-mock Basics](https://waylonwalker.com/til/pytest-mock-basics/)
 

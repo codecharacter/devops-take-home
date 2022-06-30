@@ -241,4 +241,5 @@
 - Examples:
   - [YouTube: How to Write Unit Tests for Existing Python Code - Part 1 (Arjan Codes)](https://www.youtube.com/watch?v=ULxMQ57engo)
   - [YouTube: How to Write Unit Tests for Existing Python Code - Part 2 (Arjan Codes)](https://www.youtube.com/watch?v=NI5IGAim8XU)
+- [Miguendes.me: 3 Ways to Unit Test REST APIs in Python](https://miguendes.me/3-ways-to-test-api-client-applications-in-python)
 
