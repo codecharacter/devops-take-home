@@ -187,6 +187,10 @@ I collected this workflow from one of the [training courses](https://realpython.
   - [RealPython.com](https://realpython.com/pytest-python-testing/)
 - pytest-cov
   - [Read the Docs: pytest-cov](https://pytest-cov.readthedocs.io/en/latest/)
+- \_\_main\_\_
+  - [StackOverflow: How to Test or Mock if \_\_name\_\_ == "\_\_main\_\_" contents](https://stackoverflow.com/a/27084447)
+    - *note: first comment had 28 upvotes, open to learning on this*
+  - [Medium: How to test if \_\_name\_\_ == '\_\_main\_\_'](https://medium.com/opsops/how-to-test-if-name-main-1928367290cb)
 
 ## Release History
 
