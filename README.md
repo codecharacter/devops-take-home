@@ -43,10 +43,10 @@ pip install -r requirements.txt
 ```shell
 # Navigate to script directory
 cd devops-take-home
-python ip_checker.py [IPv4 address]
+python main.py [IPv4 address]
 
 Example:
-python ip_checker.py 2.56.8.1
+python main.py 2.56.8.1
 ```
 
 Example Output for a PASS:
@@ -68,8 +68,8 @@ cd devops-take-home
 pytest  # Run all tests
 pytest tests/[filename].py  # Run any individual test
 
-# Coverage report generated from pytest-cov plugin with:
-coverage run ip-checker.py [ip-address]
+# Pytest coverage report
+pytest --cov
 ```
 
 ![](docs/images/devops-take-home-coverage-report.png)
@@ -78,7 +78,6 @@ coverage run ip-checker.py [ip-address]
 
 - [argparse](https://docs.python.org/3.9/library/argparse.html) (Std Lib)
   - The recommended command-line parsing module in the Python standard library.
-  - Other modules that fulfill the same task: [getopt](https://docs.python.org/3.9/library/getopt.html#module-getopt), [optparse](https://docs.python.org/3.9/library/optparse.html#module-optparse) (deprecated)
   - argparse provides options: 
     - positional arguments, 
     - default value for arguments, 
@@ -90,15 +89,18 @@ coverage run ip-checker.py [ip-address]
     - checking validity of an IP address (input)
     - iterating over all hosts in a particular subnet (CIDR)
 - [requests](https://pypi.org/project/requests/) (PyPI)
-  - the standard for making HTTP requests in Python
+  - a simple HTTP library in Python that allows sending requests easily
   - abstracts complexities of making requests so focus can be on consuming data & interacting with services
-  - one of the most downloaded Python packages (~30M/wk)
   - relevant features:
     - keep-alive & connection pooling
     - timeouts
     - sessions
-    - transport adapters
-- [pytest](https://pypi.org/project/pytest/)
+- [responses](https://pypi.org/project/responses/) (PyPI)
+  - a utility library for mocking out the requests Python library
+  - including integration with unit test frameworks, and more:
+    - responses as a pytest fixture
+    - assertions on declared responses
+- [pytest](https://pypi.org/project/pytest/) (PyPI)
   - testing framework used to write tests for this exercise
   - alternate testing framework available (not used): [unittest](https://docs.python.org/3.9/library/unittest.html)
   - generally, easy to use, available resources online, usable output
@@ -137,7 +139,7 @@ I noted this workflow from one of the training courses I completed.  And am acti
    - Is there activity on the bug tracker?
    - When was the last commit of the project?
 ### 6. Spot-Check the Source Code
-   - note: growing in my ability to do this; principles apply
+   - note: looking to grow in my ability to do this; principles apply
    - Does it follow best practices? (formatting, style, comments, docstrings)
    - Are there (automated) tests?
    - How experienced were the developers who wrote it?
@@ -159,6 +161,10 @@ I noted this workflow from one of the training courses I completed.  And am acti
 - requests
   - [Read the Docs: requests](https://requests.readthedocs.io/en/latest/)
   - [RealPython.com: Python's Requests Library (Guide)](https://realpython.com/python-requests/)
+- responses
+  - [GitHub: responses](https://github.com/getsentry/responses)
+  - [YouTube: Mocking Python Requests with Responses](https://www.youtube.com/watch?v=RNVspDHVIA0)
+  - [StackOverflow: responses mock requests.ConnectionError, assert function](https://stackoverflow.com/a/62107090)
 - pytest
   - [pytest Docs](https://docs.pytest.org/en/7.1.x/)
   - [RealPython.com](https://realpython.com/pytest-python-testing/)
@@ -167,8 +173,10 @@ I noted this workflow from one of the training courses I completed.  And am acti
 
 ## Release History
 
+* 2.0
+  * Submitted 6/30/2022
 * 1.0
-    * ~~Work in progress~~ Submitted 6/24/2022
+  * Submitted 6/24/2022
 
 ## Info: Dan Wadleigh
 

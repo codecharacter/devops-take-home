@@ -4,7 +4,7 @@
 # Direct Dev dependencies
 pytest==7.1.2
 pytest-cov==3.0.0
-requests-mock==1.9.3
+responses==0.21.0
 
 # Secondary Dev dependencies
 attrs==21.4.0

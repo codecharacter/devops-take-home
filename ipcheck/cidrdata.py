@@ -1,5 +1,5 @@
 import requests
-from requests.exceptions import HTTPError, Timeout, ConnectionError
+from requests.exceptions import ConnectionError, HTTPError, Timeout
 
 
 def get_cidr_data(url):
