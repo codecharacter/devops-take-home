@@ -5,6 +5,23 @@
 
 ![](docs/images/dan-wadleigh-github-header-built.png)
 
+## Personal Statement
+
+> Thank you for the opportunities - to learn, to grow, and to be challenged to produce a higher quality output.
+> I appreciate the time, patience and consideration.
+> 
+> And while I may not be confused for [Kent Beck](https://www.oreilly.com/library/view/test-driven-development/0321146530/) or [Brian Okken](https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/) anytime soon, 
+> this exercise has helped me practically [pursue improvement](https://codecharacter.dev/so-whats-the-deal-with-code-character/).
+> 
+> I understand this process is to help us both see if we're a good fit.  So, in an effort to be intellectually honest, I've 
+> captured my learnings to date and added notes at: [Testing](docs/Testing.md), [Test Driven Development](docs/Test-Driven-Development.md),
+>  [Unit Testing](docs/Unit-Testing.md), and [Pytest Framework](docs/Pytest-Framework.md).  In completing this exercise, I've only referenced what I could
+> search online.
+> 
+> I fully appreciate you have to *build* the team to meet the needs of the business.  I will always respect that.  In the end we both want to be each other's first choice.
+> 
+> I know there are things I need to work on and will continue to sharpen going forward.  And am confident I can efficiently manage any gaps.  Again, thank you for your time and the opportunity.  I look forward to meeting soon.
+
 ## Requirements
 
 - Take IP address as a command line argument
@@ -106,26 +123,26 @@ pytest --cov
   - generally, easy to use, available resources online, usable output
     - ability to filter tests
     - allows test parametrization
-- [pytest-cov](https://pypi.org/project/pytest-cov/)
+- [pytest-cov](https://pypi.org/project/pytest-cov/) (PyPI)
   - plugin that produces coverage reports
 
 ## Workflow for Selecting Packages
 
-I noted this workflow from one of the training courses I completed.  And am actively applying when possible.
+I collected this workflow from one of the [training courses](https://realpython.com/courses/managing-python-dependencies/) I completed and applying when possible.
 
 ### 1. Find Candidate Packages
    - Browse a curated list:
      - [awesome-python.com](https://awesome-python.com/), [python.libhunt.com](https://python.libhunt.com/), [python-guide.org](https://docs.python-guide.org/), [pymotw.com](https://pymotw.com/3/), [wiki.python.org](https://wiki.python.org/moin/)
    - Search Google 2-5 relevant keywords
    - Search Stack Overflow
-   - Search Community Forums: Reddit, HackerNews, Twitter
-   - Search PyPI directly
-   . Ask a question on SO, Reddit, Twitter (slow)-
+   - Search Community Forums: [Reddit: r/Python](https://www.reddit.com/r/Python/), [HackerNews (Algolia)](https://hn.algolia.com/), Twitter
+   - Search [PyPI](https://pypi.org/) directly
+   . Ask a question on SO, Reddit, Twitter (slower)
 ### 2. Check Package Popularity
    - Check download stats if available
    - Google/Reddit/SO recommendations
    - GitHub 'stars' (visible on PyPI)
-   - python.libhunt.com popularity indicator
+   - [python.libhunt.com](https://python.libhunt.com/) popularity indicator
 ### 3. Check Project Homepage
    - Is it helpful?
    - Is it well-maintained?
@@ -139,7 +156,7 @@ I noted this workflow from one of the training courses I completed.  And am acti
    - Is there activity on the bug tracker?
    - When was the last commit of the project?
 ### 6. Spot-Check the Source Code
-   - note: looking to grow in my ability to do this; principles apply
+   - *note: looking to grow in my ability to do this; principles apply*
    - Does it follow best practices? (formatting, style, comments, docstrings)
    - Are there (automated) tests?
    - How experienced were the developers who wrote it?
@@ -174,7 +191,7 @@ I noted this workflow from one of the training courses I completed.  And am acti
 ## Release History
 
 * 2.0
-  * Submitted 6/30/2022
+  * Submitted 7/1/2022
 * 1.0
   * Submitted 6/24/2022
 
