@@ -1,16 +1,18 @@
+"""Get all the JSON data from a known webpage."""
+
 import requests
 from requests.exceptions import ConnectionError, HTTPError, Timeout
 
 
 def get_cidr_data(url):
-    """Get all data from webpage."""
+    """Get the JSON data from webpage."""
 
     print("Checking........")
 
     try:
 
         response = requests.get(url)
-        response.raise_for_status()  # Assert that there were no errors
+        response.raise_for_status()
 
     except ConnectionError as conn_err:
         print(f"Connection error occurred: {conn_err}\nPlease try again.")

@@ -1,3 +1,5 @@
+"""Get an IPv4 address from a command line argument."""
+
 import argparse
 import ipaddress
 

@@ -1,7 +1,7 @@
 """Unit Test: get a valid IPv4 address from command line argument"""
 
-from ipcheck.iparg import get_ipv4_arg
 import pytest
+from ipcheck.iparg import get_ipv4_arg
 
 
 def test_get_ipv4_arg_valid(capsys):
