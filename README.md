@@ -1,9 +1,8 @@
-# Built: DevOps Take Home - Python Challenge
+# DevOps Take Home - Python Challenge
+*Note: this take home assignment for an interview in 2022*
 > Take an IP address and determine if it's in a range of CIDRs
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-
-![](docs/images/dan-wadleigh-github-header-built.png)
 
 ## Personal Statement
 
